@@ -15,7 +15,7 @@ You can install Twitch Recorder iOS through the AltStore-compatible source from 
 Source URL:
 
 ```txt
-https://raw.githubusercontent.com/atillatheboss/twitch-recorder-ios-releases/main/altstore-source.json
+https://github.com/atillatheboss/twitch-recorder-ios-releases/releases/latest/download/altstore-sources.json
 ```
 
 The AltStore source is generated automatically from the latest release. When a new release is published, the source will be updated so compatible apps can detect the newest version.

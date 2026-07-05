@@ -4,9 +4,9 @@
 
 Dieses Repository enthält öffentliche Release-Builds und eine AltStore-kompatible Source für die **Twitch Recorder iOS** App.
 
-Twitch Recorder iOS kann direkt lokal auf dem iPhone gestartet und genutzt werden, ohne dass vorher ein Recorder-Server verbunden werden muss. Du kannst die App öffnen, Einstellungen ansehen und die verfügbaren lokalen App-Funktionen verwenden, ohne den Server zu starten.
+Twitch Recorder iOS kann direkt lokal auf dem iPhone gestartet und genutzt werden, ohne dass vorher ein Recorder-Server verbunden werden muss. Die App enthält auch ohne Server die lokalen Recording- und Medienbereiche, Einstellungen, Wiedergabe-Funktionen und den vollen App-Umfang direkt auf dem iPhone.
 
-Für die beste Erfahrung und für echte unbeaufsichtigte Twitch-Aufnahmen solltest du zusätzlich den Twitch Recorder Server installieren und laufen lassen. Der Server übernimmt die eigentliche Aufnahme im Hintergrund, sodass dein iPhone nicht dauerhaft geöffnet oder verbunden bleiben muss.
+Für die beste Erfahrung und für zuverlässige echte AFK-Aufnahmen solltest du zusätzlich den Twitch Recorder Server installieren und laufen lassen. Der Server kann die Aufnahmen im Hintergrund auf einem anderen Gerät ausführen, sodass dein iPhone nicht dauerhaft geöffnet, entsperrt oder verbunden bleiben muss.
 
 ## AltStore Source
 
@@ -22,39 +22,42 @@ Die AltStore Source wird automatisch aus dem neuesten Release generiert. Wenn ei
 
 ## Funktionsweise
 
-Die iOS-App ist eine Companion-App für den Twitch Recorder Server.
+Twitch Recorder iOS kann als eigenständige lokale App oder als Companion-App für den Twitch Recorder Server verwendet werden.
 
-Die App selbst führt kein Streamlink oder FFmpeg direkt auf dem iPhone aus. Stattdessen übernimmt der Recorder-Server die eigentliche Aufnahme, den Download, die Verarbeitung und die Medienverwaltung.
+Du musst keinen Server verbinden, nur um die App zu starten und zu nutzen. Die Recordings, Medienansichten, lokalen Einstellungen und allgemeinen App-Funktionen sind direkt in der iOS-App verfügbar.
+
+Für richtige unbeaufsichtigte Aufnahme-Workflows wird der Recorder-Server empfohlen. Der Server übernimmt lange laufende Aufnahmen, Downloads, Verarbeitung und Medienverwaltung außerhalb des iPhones. Das ist besonders nützlich, wenn Aufnahmen weiterlaufen sollen, während du nicht dabei bist.
 
 Du kannst die App auf zwei Arten verwenden:
 
-### Lokaler Modus
+### Lokaler App-Modus
 
 Nutze die App ohne Verbindung zu einem Server.
 
-Das ist praktisch für:
+Damit hast du den vollen lokalen App-Umfang, inklusive:
 
-- App öffnen und testen
-- Oberfläche ansehen
-- Lokale Einstellungen verwalten
-- App vorbereiten, bevor ein Recorder-Server verbunden wird
+- App öffnen und nutzen, ohne vorher einen Server einzurichten
+- Recordings- und Medienbereiche direkt in der App verwenden
+- Lokale Wiedergabe und medienbezogene App-Funktionen nutzen
+- App-Einstellungen verwalten
+- App vorbereiten, bevor später ein Recorder-Server verbunden wird
 
 ### Server-Modus
 
 Verbinde die App mit einem laufenden Twitch Recorder Server.
 
-Dadurch wird die komplette Recorder-Erfahrung freigeschaltet:
+Das wird für die beste Erfahrung und für echte AFK-Aufnahmen empfohlen:
 
-- Echte Twitch-Aufnahmen starten
+- Twitch-Aufnahmen starten, die auf dem Server laufen
 - Aufnahmen planen
-- Streams aufnehmen, ohne selbst dabei zu sein
+- Aufnahmen weiterlaufen lassen, ohne das iPhone aktiv zu benutzen
 - Aktive und geplante Jobs verwalten
-- Aufnahmen durchsuchen
+- Vom Server erstellte Aufnahmen durchsuchen
 - Medien abspielen
 - VODs und Clips suchen und herunterladen
 - Recorder-Metriken und Server-Einstellungen anzeigen
 
-Für echte Aufnahmen wird der Server-Modus empfohlen.
+Für normale App-Nutzung reicht der lokale App-Modus. Für zuverlässige unbeaufsichtigte Twitch-Aufnahmen wird der Server-Modus empfohlen.
 
 ## Automatische Server-Erkennung
 
@@ -71,8 +74,10 @@ So verwendest du die Erkennung:
 ## Funktionen
 
 - App lokal nutzen, ohne zuerst einen Server einzurichten
+- Recordings- und Medienbereiche direkt in der App verwenden
+- Vollen lokalen App-Umfang ohne Recorder-Server nutzen
 - Recorder-Server automatisch aus der App erkennen
-- Twitch-Aufnahmen direkt vom iPhone starten
+- Twitch-Aufnahmen direkt vom iPhone starten, wenn ein Server verbunden ist
 - Stream-Qualität, Zeitplan, Dauer, Endzeit und Chat-Optionen auswählen
 - Twitch-Kanäle mit Live-/Offline-Status suchen
 - Aktive und geplante Aufnahme-Jobs verwalten
@@ -93,7 +98,7 @@ Für die lokale Nutzung benötigst du:
 - Einen gültigen IPA-Build oder die AltStore-kompatible Source
 - Eine Sideloading-Methode wie LiveContainer, SideStore oder AltStore
 
-Für die vollständige Recorder-Erfahrung benötigst du zusätzlich:
+Für die beste AFK-Recording-Erfahrung benötigst du zusätzlich:
 
 - Einen laufenden Twitch Recorder Server
 - Netzwerkzugriff vom iPhone auf den Server
@@ -121,7 +126,7 @@ Du kannst die App über die AltStore-kompatible Source oder manuell über die IP
 3. Öffne LiveContainer, SideStore oder AltStore.
 4. Importiere oder installiere die heruntergeladene IPA.
 5. Öffne Twitch Recorder iOS.
-6. Nutze die App lokal oder konfiguriere den Recorder-Server für alle Aufnahmefunktionen.
+6. Nutze die App lokal oder konfiguriere den Recorder-Server für AFK-Aufnahmefunktionen.
 
 ## LiveContainer-Status
 
@@ -140,7 +145,9 @@ Noch nicht getestet:
 
 ## Empfohlenes Setup
 
-Für die beste Erfahrung:
+Du kannst die App vollständig lokal auf deinem iPhone nutzen.
+
+Für das beste AFK-Recording-Setup:
 
 1. Installiere die iOS-App über LiveContainer.
 2. Starte den Twitch Recorder Server auf einem Gerät, das dauerhaft online bleiben kann.
@@ -157,9 +164,11 @@ Die native iOS-Wiedergabe wird über eine `AVPlayerViewController` Bridge umgese
 
 ## Hinweise
 
-- Die App kann ohne Recorder-Server geöffnet und lokal genutzt werden.
-- Echte Twitch-Aufnahmen benötigen den Recorder-Server.
-- Der Server übernimmt Aufnahme, Download, Verarbeitung, Streamlink und FFmpeg.
+- Die App kann ohne Recorder-Server geöffnet und genutzt werden.
+- Die Recordings- und Medienbereiche sind auch ohne verbundenen Server in der App verfügbar.
+- Der volle lokale App-Umfang ist direkt auf dem iPhone verfügbar.
+- Für zuverlässige AFK-Aufnahmen wird der Twitch Recorder Server empfohlen.
+- Der Server übernimmt lange laufende Aufnahme-, Download-, Verarbeitungs-, Streamlink- und FFmpeg-Aufgaben.
 - Die iOS-App dient als lokale Oberfläche, Fernsteuerung und Medienbrowser.
 - Stelle sicher, dass dein iPhone und Server sich im selben Netzwerk oder über VPN erreichen können, wenn du den Server-Modus verwendest.
 - Die AltStore Source wird automatisch aus dem neuesten Release aktualisiert.

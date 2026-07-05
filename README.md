@@ -4,9 +4,9 @@
 
 This repository contains public release builds and an AltStore-compatible source for **Twitch Recorder iOS**.
 
-Twitch Recorder iOS can be opened and used locally on your iPhone without connecting to the recorder server first. You can explore the app, configure settings, and use the available local app features without running the server.
+Twitch Recorder iOS can be opened and used locally on your iPhone without connecting to the recorder server first. The app includes the local recording and media areas, settings, playback-related features, and the full in-app experience even when no server is configured.
 
-For the best experience and for real unattended Twitch recordings, you should also install and run the Twitch Recorder server. The server does the actual recording work in the background, so your iPhone does not have to stay open or connected the whole time.
+For the best experience and for reliable real AFK recordings, you should also install and run the Twitch Recorder server. The server can keep recording in the background on another device, so your iPhone does not have to stay open, unlocked, or connected the whole time.
 
 ## AltStore Source
 
@@ -22,39 +22,42 @@ The AltStore source is generated automatically from the latest release. When a n
 
 ## How It Works
 
-The iOS app is a companion app for the Twitch Recorder server.
+Twitch Recorder iOS can be used as a standalone local app or as a companion app for the Twitch Recorder server.
 
-The app itself does not run Streamlink or FFmpeg directly on the iPhone. Instead, the recorder server handles the actual recording, downloading, processing, and media management.
+You do not need to connect a server just to start and use the app. The recordings, media views, local settings, and general app functionality are available directly inside the iOS app.
+
+For proper unattended recording workflows, the recorder server is recommended. The server handles long-running recording, downloading, processing, and media management outside of the iPhone. This is especially useful when you want recordings to continue while you are away.
 
 You can use the app in two ways:
 
-### Local Mode
+### Local App Mode
 
 Use the app without connecting to a server.
 
-This is useful for:
+This gives you the full local app experience, including:
 
-- Opening and testing the app
-- Exploring the interface
-- Managing local settings
-- Preparing the app before connecting it to a recorder server
+- Opening and using the app without server setup
+- Accessing the recordings and media sections in the app
+- Using local playback and media-related app features
+- Managing app settings
+- Preparing the app before connecting it to a recorder server later
 
 ### Server Mode
 
 Connect the app to a running Twitch Recorder server.
 
-This unlocks the full recorder experience:
+This is recommended for the best experience and for real AFK recording workflows:
 
-- Start real Twitch recordings
+- Start Twitch recordings that run on the server
 - Schedule recordings
-- Record streams without being present
+- Let recordings continue without actively using your iPhone
 - Manage active and scheduled jobs
-- Browse recordings
+- Browse recordings created by the server
 - Play recorded media
 - Search and download VODs and clips
 - View recorder metrics and server settings
 
-For real recording usage, Server Mode is recommended.
+For casual app usage, Local App Mode is enough. For reliable unattended Twitch recordings, Server Mode is recommended.
 
 ## Automatic Server Detection
 
@@ -71,8 +74,10 @@ To use this:
 ## Features
 
 - Use the app locally without setting up the server first
+- Access the recordings and media areas directly inside the app
+- Use the full local app experience without a recorder server
 - Automatically detect the recorder server from the app
-- Start Twitch recordings from your iPhone
+- Start Twitch recordings from your iPhone when connected to a server
 - Select stream quality, schedule, duration, end time, and chat options
 - Search Twitch channels with live/offline status
 - Manage active and scheduled recording jobs
@@ -93,7 +98,7 @@ To use the app locally, you need:
 - A valid IPA build or the AltStore-compatible source
 - A sideloading method such as LiveContainer, SideStore, or AltStore
 
-For the full recording experience, you also need:
+For the best AFK recording experience, you also need:
 
 - A running Twitch Recorder server
 - Network access from the iPhone to the server
@@ -121,7 +126,7 @@ You can install the app through the AltStore-compatible source or by manually in
 3. Open LiveContainer, SideStore, or AltStore.
 4. Import or install the downloaded IPA.
 5. Open Twitch Recorder iOS.
-6. Use it locally or configure the recorder server for full recording features.
+6. Use it locally or configure the recorder server for AFK recording features.
 
 ## LiveContainer Status
 
@@ -140,7 +145,9 @@ Not tested yet:
 
 ## Recommended Setup
 
-For the best experience:
+You can use the app completely locally on your iPhone.
+
+For the best AFK recording setup:
 
 1. Install the iOS app through LiveContainer.
 2. Start the Twitch Recorder server on a device that stays online.
@@ -158,8 +165,10 @@ Native iOS playback is implemented through an `AVPlayerViewController` bridge. N
 ## Notes
 
 - The app can be opened and used without the recorder server.
-- Real Twitch recordings require the recorder server.
-- The server performs recording, downloading, processing, Streamlink, and FFmpeg tasks.
+- The recordings and media areas are available inside the app without connecting a server.
+- The full local app experience is available directly on the iPhone.
+- For reliable AFK recordings, the Twitch Recorder server is recommended.
+- The server performs long-running recording, downloading, processing, Streamlink, and FFmpeg tasks.
 - The iOS app acts as a local interface, remote control, and media browser.
 - Make sure your iPhone and server can reach each other over the same network or through VPN when using Server Mode.
 - The AltStore source is updated automatically from the latest release.

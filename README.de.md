@@ -1,4 +1,4 @@
-# Twitch Recorder iOS Releases
+# Twitch Recorder Releases
 
 [🇬🇧 English README](README.md)
 
